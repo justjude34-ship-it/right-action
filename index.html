@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#08070b">
+<meta name="description" content="Right Action — personal-year guidance inspired by Juno Jordan.">
+<title>Right Action</title>
+<link rel="manifest" href="./manifest.json">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./icon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="app">
+    <div class="pill">Juno Jordan · personal year</div>
+    <h1 class="wordmark">Right Action</h1>
+    <p class="tag">What this year is for — and the next useful step.</p>
+  </header>
+  <section class="panel" id="view-today">
+    <p class="kicker">Today</p>
+    <h2 id="todayTitle">Your numbers for now</h2>
+    <p class="hint">Birth month and day are enough. Profiles stay on this phone.</p>
+    <div class="row2">
+      <div><label for="who">Name</label><input id="who" placeholder="You, or someone you love" autocomplete="name"></div>
+      <div><label for="dob">Birth date</label><input id="dob" type="date"></div>
+    </div>
+    <div class="row2">
+      <div><label for="yearPick">Look at year</label><input id="yearPick" type="number" min="1900" max="2100"></div>
+      <div><label>&nbsp;</label><div class="actions" style="margin-top:0"><button class="primary" type="button" id="btnGo">Read the year</button><button class="ghost" type="button" id="btnSave">Save</button></div></div>
+    </div>
+    <div class="profiles" id="profiles"></div>
+    <div id="todayOut"></div>
+  </section>
+  <section class="panel" id="view-year" hidden>
+    <p class="kicker">This year</p>
+    <h2 id="yearHead">The year</h2>
+    <div class="reading" id="yearOut"></div>
+  </section>
+  <section class="panel" id="view-months" hidden>
+    <p class="kicker">Twelve months</p>
+    <h2>Right action through the year</h2>
+    <p class="hint">Each calendar month carries its own Personal Month inside your Personal Year.</p>
+    <div class="monthgrid" id="monthOut"></div>
+  </section>
+  <section class="panel" id="view-cycle" hidden>
+    <p class="kicker">Nine-year map</p>
+    <h2>The chapter you are in</h2>
+    <p class="hint">A 1 plants. A 9 clears the field. The year after a 9 is a new 1, one octave up.</p>
+    <div class="cycle" id="cycleStrip"></div>
+    <div class="reading" id="cycleOut"></div>
+  </section>
+  <section class="panel" id="view-about" hidden>
+    <p class="kicker">How it works</p>
+    <h2>A timing lens, not a verdict</h2>
+    <p>Juno Jordan (1884–1984) spent fifty years counselling with numbers. <em>Your Right Action Number</em> (DeVorss, 1979) is her book of Personal Year cycles — what each of the nine years is for, and how to meet every month inside it.</p>
+    <p>This app uses that same public method. The wording here is original. It is not a reprint of her book, and it is not affiliated with DeVorss & Company or the Jordan estate.</p>
+    <h3>The sums</h3>
+    <p>Personal Year = birth month + birth day + calendar year, reduced to 1–9.</p>
+    <p>Personal Month = Personal Year + calendar month, reduced to 1–9.</p>
+    <p>Personal Day = Personal Month + calendar day, reduced to 1–9.</p>
+    <p>The year runs with the calendar: 1 January to 31 December. Master numbers are reduced; the Personal Year is always a single digit.</p>
+    <h3>On your phone</h3>
+    <p>In the browser menu choose Add to Home Screen. After that it opens like an app and works offline. Nothing is uploaded. Not therapy. Not fate. You stay in the driver’s seat.</p>
+  </section>
+  <footer class="note">Inspired by Juno Jordan’s personal-year method. Not affiliated. Not fortune-telling. Nothing leaves this phone.</footer>
+</div>
+<nav class="tabs" aria-label="Sections">
+  <button class="on" data-view="today" type="button">Today</button>
+  <button data-view="year" type="button">Year</button>
+  <button data-view="months" type="button">Months</button>
+  <button data-view="cycle" type="button">Cycle</button>
+  <button data-view="about" type="button">About</button>
+</nav>
+<script src="./app.js"></script>
+</body>
+</html>
